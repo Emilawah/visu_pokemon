@@ -47,6 +47,18 @@ select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
 .forme-ref { fill: none; stroke: #8b93a7; stroke-width: 1.5; stroke-dasharray: 5 4; }
 .point { stroke: #fff; stroke-width: 2; cursor: pointer; }
 
+
+#graphique image {
+  transform-box: fill-box;     
+  transform-origin: center;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+#graphique image:hover {
+  transform: scale(1.5);       
+}
+
+
 #resume {
   margin-top: 16px; text-align: center; color: var(--discret); font-size: .95rem;
 }
