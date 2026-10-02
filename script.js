@@ -52,7 +52,7 @@ const infobulle = d3.select("#infobulle");
 
 const xy = (a, r) => [r * Math.sin(a), -r * Math.cos(a)];
 
-d3.csv("pokemon.csv", d3.autoType).then(brut => {
+d3.csv("csv/pokemon.csv", d3.autoType).then(brut => {
 
   const vus = new Set();
   const donnees = brut.filter(d => {
