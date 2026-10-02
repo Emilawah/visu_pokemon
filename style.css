@@ -136,6 +136,18 @@ input:focus-visible {
     cursor: pointer;
 }
 
+
+#graphique image {
+  transform-box: fill-box;     
+  transform-origin: center;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+#graphique image:hover {
+  transform: scale(1.5);       
+}
+
+
 #resume {
     margin-top: 16px;
     text-align: center;
