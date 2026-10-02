@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon – Les types par génération</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Les types de Pokémon, génération par génération</h1>
+    <p>Chaque branche de l'araignée est un type. Plus le point est éloigné du centre, plus il y a de Pokémon de ce type.
+       Change de génération pour voir la forme évoluer.</p>
+  </header>
+
+  <main>
+    <section class="controles">
+      <label for="select-gen">Génération</label>
+      <select id="select-gen"></select>
+
+      <label for="select-types">Types</label>
+      <select id="select-types">
+        <option value="tous">Types 1 et 2 (tous)</option>
+        <option value="type1">Type 1 uniquement</option>
+        <option value="type2">Doubles types (Type 2)</option>
+      </select>
+    </section>
+
+    <section id="graphique"></section>
+
+    <section id="resume"></section>
+  </main>
+
+  <div id="infobulle" role="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
