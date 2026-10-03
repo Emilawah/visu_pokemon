@@ -1,8 +1,8 @@
 // ---------- Paramètres ----------
-const TAILLE = 780;                 // viewBox carré
+const TAILLE = 650;                 // viewBox carré
 const CENTRE = TAILLE / 2;
 const RAYON = 225;
-const NB_GRADUATIONS = 5;
+const NB_GRADUATIONS = 5
 
 // 18 types (ordre fixe autour de l'araignée) + couleur (variable visuelle : teinte = type)
 const TYPES = [
