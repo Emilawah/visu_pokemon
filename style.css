@@ -37,7 +37,7 @@ header p {
 }
 
 main {
-    max-width: 860px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 16px;
 }
@@ -135,6 +135,18 @@ input:focus-visible {
     stroke-width: 2;
     cursor: pointer;
 }
+
+
+#graphique image {
+  transform-box: fill-box;     
+  transform-origin: center;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+#graphique image:hover {
+  transform: scale(1.5);       
+}
+
 
 #resume {
     margin-top: 16px;
