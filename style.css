@@ -211,3 +211,31 @@ input:focus-visible {
         font-size: 15px;
     }
 }
+
+/* Styles personnalisés pour l'animation */
+#pikachu-animation-section {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0 L100 50 L50 100 L0 50 Z" fill="%23f3f4f6" opacity="0.4"/></svg>');
+    /* Motif géométrique léger */
+    background-color: #f9fafb;
+    /* Très léger gris pour la section */
+    height: 40vh;
+    /* Hauteur de la zone d'animation */
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#moving-pikachu {
+    position: absolute;
+    bottom: 5%;
+    /* Légèrement décollé du bas */
+    width: 15vw;
+    /* Taille responsive */
+    min-width: 100px;
+    max-width: 250px;
+    opacity: 0;
+    /* Caché initialement */
+    transition: transform 0.2s ease-out, opacity 0.3s ease-in-out;
+    /* Mouvements et apparitions fluides */
+    z-index: 20;
+}
