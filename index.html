@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéStats Explorer - Accueil</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="min-h-screen flex flex-col font-sans">
@@ -38,9 +39,9 @@
         </div>
     </nav>
 
-    <main class="flex-grow pt-24">
+    <main id="main-container" class="flex-grow pt-24">
         <!-- Hero Section -->
-        <section class="relative pt-20 pb-32 px-4 md:px-8 overflow-hidden hero-pattern">
+        <section id="hero-section" class="relative pt-20 pb-32 px-4 md:px-8 overflow-hidden hero-pattern">
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-sm font-semibold mb-6">
@@ -80,8 +81,17 @@
             </div>
         </section>
 
+        <!-- Pikachu Animation Section (NOUVELLE SECTION) -->
+        <section id="pikachu-animation-section" class="py-10">
+            <!-- J'ai remplacé "max-w-6xl mx-auto px-4" par "w-full" -->
+            <div class="w-full h-full relative">
+                <!-- Pikachu stylized en cours de course -->
+                <img id="moving-pikachu" src="assets/pika.gif" alt="Pikachu qui court">
+            </div>
+        </section>
+
         <!-- Features Section -->
-        <section class="py-20 bg-white px-4 md:px-8 border-t border-gray-100">
+        <section id="features-section" class="py-20 bg-white px-4 md:px-8 border-t border-gray-100">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Tout ce que vous devez savoir</h2>
@@ -167,6 +177,8 @@
                 &copy; 2026 PokéStats Explorer. </p>
         </div>
     </footer>
+
+    <script src="script-pika.js"></script>
 
 </body>
 

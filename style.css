@@ -37,7 +37,6 @@ header p {
 }
 
 main {
-    max-width: 700px;
     margin: 0 auto;
     padding: 16px;
 }
@@ -138,13 +137,14 @@ input:focus-visible {
 
 
 #graphique image {
-  transform-box: fill-box;     
-  transform-origin: center;
-  transition: transform 0.15s ease;
-  cursor: pointer;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.15s ease;
+    cursor: pointer;
 }
+
 #graphique image:hover {
-  transform: scale(1.5);       
+    transform: scale(1.5);
 }
 
 
@@ -221,6 +221,49 @@ input:focus-visible {
     .etiquette {
         font-size: 15px;
     }
+}
+
+
+
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -1000px 0;
+    }
+}
+
+#pikachu-animation-section {
+    /* CORRECTION : Ajouter url() */
+    background-image: url('assets/foret_tuilable.png');
+
+    background-color: #f9fafb;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+
+    /* SUPPRIMER ou COMMENTER cette ligne pour que l'animation ne tourne pas en boucle toute seule */
+    /* animation: scrollBackground 2s linear infinite; */
+}
+
+#moving-pikachu {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 15vw;
+    min-width: 100px;
+    max-width: 250px;
+    opacity: 0;
+    transition: transform 0.2s ease-out, opacity 0.3s ease-in-out;
+    z-index: 20;
 }
 
 /* =====================================================
