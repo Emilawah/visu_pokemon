@@ -37,9 +37,12 @@ header p {
 }
 
 main {
-    max-width: 700px;
     margin: 0 auto;
     padding: 16px;
+}
+
+main:has(#graphique) {
+    max-width: 700px;
 }
 
 .controles {
