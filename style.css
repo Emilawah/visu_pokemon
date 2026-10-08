@@ -178,7 +178,6 @@ input:focus-visible {
     height: 30px;
 }
 
-;
 
 .hero-pattern {
     background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
@@ -223,3 +222,183 @@ input:focus-visible {
         font-size: 15px;
     }
 }
+
+/* =====================================================
+   Page "Forces et faiblesses"
+   ===================================================== */
+main.large { max-width: 1100px; }
+
+.titre-infobulle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.icone-infobulle { width: 22px; height: 22px; }
+
+.disposition {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    align-items: flex-start;
+}
+
+#matrice-carte {
+    flex: 1 1 520px;
+    background: var(--carte);
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+    padding: 12px;
+}
+
+#matrice svg { width: 100%; height: auto; display: block; }
+
+.legende-matrice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: .82rem;
+    color: var(--discret);
+}
+
+.legende-matrice li { display: flex; align-items: center; gap: 6px; }
+
+.pastille {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #d9dde7;
+    display: inline-block;
+}
+
+.axe-titre { font-size: 9px; font-weight: 700; fill: var(--discret); }
+
+.cellule { cursor: pointer; transition: opacity .12s; }
+.cellule.estompe { opacity: .3; }
+.valeur { font-size: 12px; font-weight: 700; fill: #3b4252; pointer-events: none; }
+.valeur-claire { fill: #fff; }
+
+.entete { cursor: pointer; }
+.entete image,
+.entete rect {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform .15s ease;
+}
+.entete:hover image,
+.entete:hover rect { transform: scale(1.25); }
+.secours { font-size: 8px; font-weight: 700; fill: #fff; pointer-events: none; }
+
+.cadre { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+.cadre-2 { stroke-dasharray: 5 3; }
+
+.eff-2 { color: #7fe0a0; font-weight: 600; }
+.eff-05 { color: #f6b8c0; font-weight: 600; }
+.eff-0 { color: #c9ced9; font-weight: 600; }
+.eff-1 { color: #e5e7eb; }
+
+/* Fiche détaillée */
+#panneau {
+    flex: 1 1 300px;
+    background: var(--carte);
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+    padding: 16px 18px;
+}
+
+.titre-fiche { display: flex; align-items: center; gap: 8px; }
+.titre-fiche h3 { margin: 0 0 0 4px; font-size: 1.3rem; }
+.icone-fiche { width: 36px; height: 36px; }
+
+.section {
+    margin: 18px 0 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--grille);
+    font-size: .95rem;
+}
+
+.groupe { margin: 8px 0; }
+.groupe h4 { margin: 0 0 2px; font-size: .8rem; font-weight: 600; color: var(--discret); }
+.groupe.bon h4, .groupe.bon-def h4 { color: #2f9e5b; }
+.groupe.mauvais h4, .groupe.mauvais-def h4 { color: #d1495b; }
+.groupe.tres-faible h4 { color: #a4161a; }
+
+.puce {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 9px 2px 3px;
+    margin: 3px 4px 3px 0;
+    border: 2px solid;
+    border-radius: 999px;
+    background: #fff;
+    font-size: .82rem;
+    font-weight: 600;
+}
+.icone-puce { width: 20px; height: 20px; }
+.vide { color: var(--discret); font-size: .85rem; font-style: italic; }
+.bilan { margin: 0 0 4px; color: var(--discret); font-size: .88rem; }
+.bilan strong { color: var(--texte); }
+
+/* =====================================================
+   Page "Le duel des types"
+   ===================================================== */
+.controles-duel { flex-direction: column; gap: 14px; }
+
+.choix-types { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.type-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 4px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--c) 18%, white);
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--texte);
+    cursor: pointer;
+    transition: transform .12s ease, border-color .12s ease;
+}
+.type-btn img { width: 22px; height: 22px; }
+.type-btn:not(:has(img)) { padding-left: 10px; }
+.type-btn:hover { transform: translateY(-2px); }
+.type-btn.actif { border-color: var(--accent); background: color-mix(in srgb, var(--c) 40%, white); }
+.type-btn.actif2 { border: 2px dashed var(--accent); }
+
+.options-duel { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: center; }
+.options-duel label { font-weight: 600; font-size: .9rem; }
+
+#bilan { margin-top: 16px; background: var(--carte); border-radius: 12px; padding: 14px 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
+.bilan-titre { display: flex; align-items: center; gap: 8px; }
+.bilan-titre h2 { margin: 0 0 0 4px; font-size: 1.3rem; }
+.bilan-chiffres { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; margin: 10px 0 0; padding: 0; font-size: .92rem; }
+.bilan-chiffres strong { font-size: 1.2rem; margin-right: 4px; }
+.b-vert strong { color: #2f9e5b; }
+.b-rouge strong { color: #d1495b; }
+.b-noir strong { color: #2f3440; }
+.note { margin: 10px 0 0; font-size: .85rem; color: var(--discret); }
+
+.carte-duel { margin-top: 16px; background: var(--carte); border-radius: 12px; padding: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
+.carte-duel svg { width: 100%; height: auto; display: block; }
+
+.duel-titre { font-size: 14px; font-weight: 800; fill: var(--texte); letter-spacing: .04em; }
+.duel-sous-titre { font-size: 11px; fill: var(--discret); }
+.duel-grille { stroke: var(--grille); stroke-dasharray: 3 4; }
+.duel-axe { stroke: #9aa1b2; stroke-width: 1.5; }
+.duel-grad { font-size: 10px; fill: var(--discret); }
+.duel-nom { font-size: 13px; font-weight: 600; fill: var(--texte); }
+.duel-ligne { cursor: pointer; }
+.duel-survol { fill: transparent; transition: fill .12s; }
+.duel-ligne:hover .duel-survol { fill: rgba(0, 0, 0, .05); }
+.val-def, .val-att { font-size: 11.5px; fill: var(--discret); font-weight: 600; }
+.val-def.fort, .val-att.fort { fill: var(--texte); font-weight: 800; }

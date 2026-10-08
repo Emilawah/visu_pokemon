@@ -15,7 +15,7 @@ const TYPES = [
 const NOMS_TYPES = TYPES.map(t => t[0]);
 
 
-const DOSSIER_ICONES = "assets/pokemon-types/";
+const DOSSIER_ICONES = "../assets/pokemon-types/";
 const ICONES = {
   "Normal": "normal.ico", "Feu": "feu.ico", "Eau": "eau.ico", "Électrik": "electrik.ico",
   "Plante": "plante.ico", "Glace": "glace.ico", "Combat": "combat.ico", "Poison": "poison.ico",
@@ -52,7 +52,7 @@ const infobulle = d3.select("#infobulle");
 
 const xy = (a, r) => [r * Math.sin(a), -r * Math.cos(a)];
 
-d3.csv("csv/pokemon.csv", d3.autoType).then(brut => {
+d3.csv("../csv/pokemon.csv", d3.autoType).then(brut => {
 
   const vus = new Set();
   const donnees = brut.filter(d => {

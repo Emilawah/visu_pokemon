@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon – Le duel des types</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <button id="retour" class="btn-retour" onclick="window.location.href='../index.html'">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7" />
+    </svg>
+    Retour à l'accueil
+  </button>
+
+  <header>
+    <h1>Le duel des types</h1>
+    <p>Choisis un type : à gauche, les dégâts qu'il <strong>subit</strong> face à chaque adversaire ; à droite, ceux qu'il
+      <strong>inflige</strong>. Plus la barre est longue, plus les dégâts sont importants. Vert = avantage, rouge = danger.</p>
+  </header>
+
+  <main class="large">
+    <section class="controles controles-duel">
+      <div id="choix-types" class="choix-types" aria-label="Choisir un type"></div>
+      <div class="options-duel">
+        <label for="select-type2">Second type (double type)</label>
+        <select id="select-type2"></select>
+        <label for="select-tri">Trier les adversaires</label>
+        <select id="select-tri">
+          <option value="types">Ordre des types</option>
+          <option value="attaque">Meilleurs en attaque d'abord</option>
+          <option value="defense">Plus dangereux d'abord</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="bilan"></section>
+
+    <section id="duel" class="carte-duel"></section>
+  </main>
+
+  <div id="infobulle" role="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="../js/graph_duel.js"></script>
+</body>
+
+</html>
